@@ -4,9 +4,9 @@
 [![BSD License](http://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/nabeken/go-jwkset/blob/master/LICENSE)
 
 go-jwkset is a library to fetch JSON Web Key Set on top of [square/go-jose.v2](https://gopkg.in/square/go-jose.v2) library.
-This allows you to build cache-ware fetcher over HTTP and/or AWS S3.
+go-jwkset allows you to build cache-ware custom fetcher for JWKSet.
 
-# Built-in implementation
+# Built-in fetcher implementation
 
 - Plain HTTP
 - AWS S3
