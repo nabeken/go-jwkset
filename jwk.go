@@ -14,9 +14,9 @@ import (
 	"gopkg.in/square/go-jose.v2"
 )
 
-// JWKSetResponse represents a response of JWK Set.
+// Response represents a response of JWK Set.
 // This contains a TTL (Time to Live) for caching purpose.
-type JWKSetResponse struct {
+type Response struct {
 	Keys []jose.JSONWebKey
 
 	TTL time.Duration // This would be used as TTL for caching.
@@ -29,15 +29,15 @@ type HTTPFetcher struct {
 
 // FetchJWKs implements Fetcher interface by using http.Client.
 // FetchJWKs tries to retrieve JWKSet from uri.
-func (f *HTTPFetcher) FetchJWKs(uri string) (*JWKSetResponse, error) {
+func (f *HTTPFetcher) FetchJWKs(uri string) (*Response, error) {
 	resp, err := f.Client.Get(uri)
 	if err != nil {
 		return nil, err
 	}
 	defer resp.Body.Close()
 
-	jwks, err := DecodeJWKSet(resp.Body)
-	return &JWKSetResponse{
+	jwks, err := Decode(resp.Body)
+	return &Response{
 		Keys: jwks,
 	}, err
 }
@@ -49,7 +49,7 @@ type S3Fetcher struct {
 
 // FetchJWKs implements JWKsS3Fetcher by using S3. It tries to retrieve an S3 object from path.
 // path must be in s3://<bucket>/<key>.
-func (f *S3Fetcher) FetchJWKs(path string) (*JWKSetResponse, error) {
+func (f *S3Fetcher) FetchJWKs(path string) (*Response, error) {
 	s3url, err := url.Parse(path)
 	if err != nil {
 		return nil, err
@@ -65,8 +65,8 @@ func (f *S3Fetcher) FetchJWKs(path string) (*JWKSetResponse, error) {
 	}
 	defer resp.Body.Close()
 
-	jwks, err := DecodeJWKSet(resp.Body)
-	return &JWKSetResponse{
+	jwks, err := Decode(resp.Body)
+	return &Response{
 		Keys: jwks,
 	}, err
 }
@@ -94,9 +94,9 @@ func NewCacher(defaultExpiration, cleanupInterval time.Duration, f Fetcher) *Cac
 
 // FetchJWKs tries to retrieve JWKs from Cache. If the cache is not available,
 // it will call Fetcher.FetchJWKs and cache the result for future request.
-func (c *Cacher) FetchJWKs(cacheKey string) (*JWKSetResponse, error) {
+func (c *Cacher) FetchJWKs(cacheKey string) (*Response, error) {
 	if keys, found := c.cache.Get(cacheKey); found {
-		return &JWKSetResponse{Keys: keys.([]jose.JSONWebKey)}, nil
+		return &Response{Keys: keys.([]jose.JSONWebKey)}, nil
 	}
 	jwksresp, err := c.fetcher.FetchJWKs(cacheKey)
 	if err != nil {
@@ -115,8 +115,8 @@ func (c *Cacher) FetchJWKs(cacheKey string) (*JWKSetResponse, error) {
 	return jwksresp, nil
 }
 
-// DecodeJWKSet decodes the data with reading from r into JWKs.
-func DecodeJWKSet(r io.Reader) ([]jose.JSONWebKey, error) {
+// Decode decodes the data with reading from r into JWKs.
+func Decode(r io.Reader) ([]jose.JSONWebKey, error) {
 	keyset := jose.JSONWebKeySet{}
 	if err := json.NewDecoder(r).Decode(&keyset); err != nil && err != io.EOF {
 		return nil, err
