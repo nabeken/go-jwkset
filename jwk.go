@@ -1,6 +1,7 @@
 package jwkset
 
 import (
+	"bytes"
 	"encoding/json"
 	"io"
 	"net/http"
@@ -25,6 +26,22 @@ type Response struct {
 // HTTPFetcher fetches JWKs over HTTP.
 type HTTPFetcher struct {
 	Client *http.Client
+}
+
+// InMemoryFetcher fetches JWKs from its memory.
+type InMemoryFetcher struct {
+	RAWJWKs []byte
+}
+
+// FetchJWKs implements Fetcher interface by using internal JWKs.
+func (f *InMemoryFetcher) FetchJWKs(_ string) (*Response, error) {
+	jwks, err := Decode(bytes.NewReader(f.RAWJWKs))
+	if err != nil {
+		return nil, err
+	}
+	return &Response{
+		Keys: jwks,
+	}, nil
 }
 
 // FetchJWKs implements Fetcher interface by using http.Client.
