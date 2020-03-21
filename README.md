@@ -10,6 +10,7 @@ go-jwkset allows you to build cache-ware custom fetcher for JWKSet.
 
 - Plain HTTP
 - AWS S3
+- [AWS Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html)
 
 # Versioning
 
