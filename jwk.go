@@ -2,8 +2,12 @@ package jwkset
 
 import (
 	"bytes"
+	"crypto/x509"
 	"encoding/json"
+	"encoding/pem"
+	"fmt"
 	"io"
+	"io/ioutil"
 	"net/http"
 	"net/url"
 	"time"
@@ -21,6 +25,36 @@ type Response struct {
 	Keys []jose.JSONWebKey
 
 	TTL time.Duration // This would be used as TTL for caching.
+}
+
+// ALBFetcher fetchs a public key from AWS's Application Load Balancer and decodes it into JWK.
+type ALBFetcher struct {
+	Client *http.Client
+	Region string
+	Algo   jose.SignatureAlgorithm
+}
+
+func (f *ALBFetcher) keyURL(kid string) string {
+	// https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html
+	return fmt.Sprintf("https://public-keys.auth.elb.%s.amazonaws.com/%s", f.Region, kid)
+}
+
+func (f *ALBFetcher) FetchJWKs(kid string) (*Response, error) {
+	resp, err := f.Client.Get(f.keyURL(kid))
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	data, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	jwks, err := DecodeSigPublicKey(data, kid, f.Algo)
+	return &Response{
+		Keys: jwks,
+	}, err
 }
 
 // HTTPFetcher fetches JWKs over HTTP.
@@ -130,6 +164,31 @@ func (c *Cacher) FetchJWKs(cacheKey string) (*Response, error) {
 
 	c.cache.Set(cacheKey, jwksresp.Keys, ttl)
 	return jwksresp, nil
+}
+
+// DecodeSigPublicKey decodes the plain public key into JWKs used for sigining.
+// https://github.com/square/go-jose/blob/v2.4.1/jose-util/utils.go#L42
+func DecodeSigPublicKey(data []byte, kid string, algo jose.SignatureAlgorithm) ([]jose.JSONWebKey, error) {
+	input := data
+
+	block, _ := pem.Decode(data)
+	if block != nil {
+		input = block.Bytes
+	}
+
+	pub, err := x509.ParsePKIXPublicKey(input)
+	if err != nil {
+		return nil, err
+	}
+
+	return []jose.JSONWebKey{
+		{
+			Key:       pub,
+			KeyID:     kid,
+			Algorithm: string(algo),
+			Use:       "sig",
+		},
+	}, nil
 }
 
 // Decode decodes the data with reading from r into JWKs.

@@ -1,6 +1,7 @@
 package jwkset
 
 import (
+	"crypto/ecdsa"
 	"net/http"
 	"testing"
 	"time"
@@ -8,6 +9,26 @@ import (
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/square/go-jose.v2"
 )
+
+func TestALBFetcher(t *testing.T) {
+	assert := assert.New(t)
+	fetcher := &ALBFetcher{
+		Client: &http.Client{},
+		Region: "ap-northeast-1",
+		Algo:   jose.ES256,
+	}
+	jwksresp, err := fetcher.FetchJWKs("21a3e6e4-c32e-4650-b43d-813ba7628f3b")
+	assert.NoError(err)
+	assert.Len(jwksresp.Keys, 1)
+
+	key := jwksresp.Keys[0]
+
+	assert.Equal("ES256", key.Algorithm)
+	_, ok := jwksresp.Keys[0].Key.(*ecdsa.PublicKey)
+	if !assert.True(ok) {
+		t.Logf("got '%#v'", jwksresp.Keys[0])
+	}
+}
 
 func TestFetcher(t *testing.T) {
 	assert := assert.New(t)
