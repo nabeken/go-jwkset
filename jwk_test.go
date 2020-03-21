@@ -16,7 +16,7 @@ func TestFetcher(t *testing.T) {
 	}
 	jwksresp, err := fetcher.FetchJWKs("https://www.googleapis.com/oauth2/v3/certs")
 	assert.NoError(err)
-	assert.Len(jwksresp.Keys, 4)
+	assert.Len(jwksresp.Keys, 3)
 }
 
 func TestJWKsCacher(t *testing.T) {
@@ -31,7 +31,7 @@ func TestJWKsCacher(t *testing.T) {
 	cacheKey := "https://www.googleapis.com/oauth2/v3/certs"
 	jwksresp, err := cacher.FetchJWKs(cacheKey)
 	assert.NoError(err)
-	assert.Len(jwksresp.Keys, 4)
+	assert.Len(jwksresp.Keys, 3)
 
 	cachedResp, found := cacher.cache.Get(cacheKey)
 	assert.True(found)
@@ -43,5 +43,5 @@ func TestJWKsCacher(t *testing.T) {
 
 	jwksresp, err = cacher.FetchJWKs(cacheKey)
 	assert.NoError(err)
-	assert.Len(jwksresp.Keys, 4)
+	assert.Len(jwksresp.Keys, 3)
 }
