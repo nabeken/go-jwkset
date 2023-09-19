@@ -1,10 +1,10 @@
 # go-jwkset
 
-[![Build Status](https://img.shields.io/travis/nabeken/go-jwkset/master.svg)](https://travis-ci.org/nabeken/go-jwkset)
+[![Go](https://github.com/nabeken/go-jwkset/actions/workflows/go.yml/badge.svg)](https://github.com/nabeken/go-jwkset/actions/workflows/go.yml)
 [![BSD License](http://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/nabeken/go-jwkset/blob/master/LICENSE)
 
-go-jwkset is a library to fetch JSON Web Key Set on top of [square/go-jose.v2](https://gopkg.in/square/go-jose.v2) library.
-go-jwkset allows you to build cache-ware custom fetcher for JWKSet.
+go-jwkset is a library to fetch [JSON Web Key](https://datatracker.ietf.org/doc/html/rfc7517) ("JWK") Set on top of [square/go-jose.v2](https://gopkg.in/square/go-jose.v2) library.
+go-jwkset allows you to build a cache-ware custom fetcher for JWKSet.
 
 # Built-in fetcher implementation
 
@@ -14,4 +14,4 @@ go-jwkset allows you to build cache-ware custom fetcher for JWKSet.
 
 # Versioning
 
-This library follows [Semantic Versions](http://semver.org/) and we highly recommend to use some package manager such as `dep` or `glide`.
+This library follows [Semantic Versions](http://semver.org/).
