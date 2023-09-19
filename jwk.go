@@ -15,8 +15,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3iface"
+	"github.com/go-jose/go-jose/v3"
 	"github.com/patrickmn/go-cache"
-	"gopkg.in/square/go-jose.v2"
 )
 
 // Response represents a response of JWK Set.
