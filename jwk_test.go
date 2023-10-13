@@ -3,6 +3,8 @@ package jwkset
 import (
 	"crypto/ecdsa"
 	"net/http"
+	"net/http/httptest"
+	"os"
 	"testing"
 	"time"
 
@@ -35,7 +37,10 @@ func TestFetcher(t *testing.T) {
 	fetcher := &HTTPFetcher{
 		Client: &http.Client{},
 	}
-	jwksresp, err := fetcher.FetchJWKs("https://www.googleapis.com/oauth2/v3/certs")
+
+	testURL := testServer(t)
+
+	jwksresp, err := fetcher.FetchJWKs(testURL)
 	assert.NoError(err)
 	assert.Len(jwksresp.Keys, 2)
 }
@@ -49,7 +54,9 @@ func TestJWKsCacher(t *testing.T) {
 		Client: &http.Client{},
 	})
 
-	cacheKey := "https://www.googleapis.com/oauth2/v3/certs"
+	testURL := testServer(t)
+
+	cacheKey := testURL
 	jwksresp, err := cacher.FetchJWKs(cacheKey)
 	assert.NoError(err)
 	assert.Len(jwksresp.Keys, 2)
@@ -65,4 +72,20 @@ func TestJWKsCacher(t *testing.T) {
 	jwksresp, err = cacher.FetchJWKs(cacheKey)
 	assert.NoError(err)
 	assert.Len(jwksresp.Keys, 2)
+}
+
+func testServer(t *testing.T) string {
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		data, err := os.ReadFile("_testdata/google.jwk")
+		if err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+
+		w.Write(data)
+	}))
+
+	t.Cleanup(func() { ts.Close() })
+
+	return ts.URL
 }
