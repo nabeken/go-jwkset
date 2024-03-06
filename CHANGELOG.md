@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/nabeken/go-jwkset/compare/v1.0.1...v2.0.0) (2024-03-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* prep for v2 ([#63](https://github.com/nabeken/go-jwkset/issues/63))
+
+### Features
+
+* prep for v2 ([#63](https://github.com/nabeken/go-jwkset/issues/63)) ([afcd0a1](https://github.com/nabeken/go-jwkset/commit/afcd0a1553336e4f8151a4e1224053953cb9b9e2))
+
 ## [1.0.1](https://github.com/nabeken/go-jwkset/compare/v1.0.0...v1.0.1) (2024-03-05)
 
 
