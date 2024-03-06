@@ -8,11 +8,11 @@ import (
 	"encoding/pem"
 	"flag"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 
-	"github.com/go-jose/go-jose/v3"
+	"github.com/go-jose/go-jose/v4"
 )
 
 func main() {
@@ -24,7 +24,7 @@ func main() {
 		return
 	}
 
-	rawPublicKey, err := ioutil.ReadAll(os.Stdin)
+	rawPublicKey, err := io.ReadAll(os.Stdin)
 	if err != nil {
 		log.Fatal("unable to read a public key from stdin:", err)
 	}
