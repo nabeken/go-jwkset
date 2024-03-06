@@ -6,6 +6,14 @@
 go-jwkset is a library to fetch [JSON Web Key](https://datatracker.ietf.org/doc/html/rfc7517) ("JWK") Set on top of [go-jose/go-jose/v4](https://github.com/go-jose/go-jose) library.
 go-jwkset allows you to build a cache-ware custom fetcher for JWKSet.
 
+# v2
+
+The `master` branch is for v2 version of the library. Please import the library with the following.
+
+```go
+import "github.com/nabeken/go-jwkset/v2"
+```
+
 # Built-in fetcher implementation
 
 - Plain HTTP

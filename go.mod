@@ -1,4 +1,4 @@
-module github.com/nabeken/go-jwkset
+module github.com/nabeken/go-jwkset/v2
 
 go 1.21
 
