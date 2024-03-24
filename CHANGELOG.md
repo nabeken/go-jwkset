@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.1](https://github.com/nabeken/go-jwkset/compare/v2.0.0...v2.0.1) (2024-03-24)
+
+
+### Bug Fixes
+
+* **deps:** update google-github-actions/release-please-action digest to a37ac6e ([#68](https://github.com/nabeken/go-jwkset/issues/68)) ([288747c](https://github.com/nabeken/go-jwkset/commit/288747c14e2830e926d4f51de951ad1e4f2cff51))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.50.35 ([#67](https://github.com/nabeken/go-jwkset/issues/67)) ([7d936bb](https://github.com/nabeken/go-jwkset/commit/7d936bb2688641769b7ebafabe3eb624bf7b7766))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.51.1 ([#69](https://github.com/nabeken/go-jwkset/issues/69)) ([38c5c5f](https://github.com/nabeken/go-jwkset/commit/38c5c5f863d461b56a2aa1a432712585f837e1bf))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.51.6 ([#70](https://github.com/nabeken/go-jwkset/issues/70)) ([d152748](https://github.com/nabeken/go-jwkset/commit/d1527480e85780f841f5300c0260d519eec8cf3c))
+* **deps:** update module github.com/go-jose/go-jose/v4 to v4.0.1 [security] ([#65](https://github.com/nabeken/go-jwkset/issues/65)) ([bcfcf87](https://github.com/nabeken/go-jwkset/commit/bcfcf87b1fd48ad6fe3ec2386e3e98541d9bd89a))
+* **deps:** update nabeken/go-github-apps digest to 6eb3a08 ([#71](https://github.com/nabeken/go-jwkset/issues/71)) ([d7c45ce](https://github.com/nabeken/go-jwkset/commit/d7c45cecc4d3d49aa3c8316da9553a119e5d8af2))
+
 ## [2.0.0](https://github.com/nabeken/go-jwkset/compare/v1.0.1...v2.0.0) (2024-03-06)
 
 
