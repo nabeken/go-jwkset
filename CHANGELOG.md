@@ -1,5 +1,38 @@
 # Changelog
 
+## [2.0.1](https://github.com/nabeken/go-jwkset/compare/v2.0.0...v2.0.1) (2024-06-21)
+
+
+### Bug Fixes
+
+* **deps:** pin googleapis/release-please-action action to f3969c0 ([#87](https://github.com/nabeken/go-jwkset/issues/87)) ([2277bb8](https://github.com/nabeken/go-jwkset/commit/2277bb826b3748cfbfdddc1c207391d31ec89e02))
+* **deps:** update actions/checkout digest to 0ad4b8f ([#77](https://github.com/nabeken/go-jwkset/issues/77)) ([f9d31de](https://github.com/nabeken/go-jwkset/commit/f9d31dee5453a775bf0bf93a4f4af6cc46246a4c))
+* **deps:** update actions/checkout digest to 692973e ([#90](https://github.com/nabeken/go-jwkset/issues/90)) ([57b1c19](https://github.com/nabeken/go-jwkset/commit/57b1c19642c09f344458d40987090de4c456ea28))
+* **deps:** update actions/checkout digest to a5ac7e5 ([#86](https://github.com/nabeken/go-jwkset/issues/86)) ([f9b1557](https://github.com/nabeken/go-jwkset/commit/f9b1557a939ee630159900a2631deddc3ffa2f84))
+* **deps:** update actions/setup-go digest to cdcb360 ([#79](https://github.com/nabeken/go-jwkset/issues/79)) ([cefdd66](https://github.com/nabeken/go-jwkset/commit/cefdd663d28bf11c049484cee803beff0b443936))
+* **deps:** update all non-major dependencies ([#75](https://github.com/nabeken/go-jwkset/issues/75)) ([0645f9a](https://github.com/nabeken/go-jwkset/commit/0645f9a346793e9df06fc45433be39ee98d8aa21))
+* **deps:** update all non-major dependencies ([#76](https://github.com/nabeken/go-jwkset/issues/76)) ([3e08fe3](https://github.com/nabeken/go-jwkset/commit/3e08fe31f30aaa5159113885f8bfe05f2fdb139d))
+* **deps:** update all non-major dependencies ([#83](https://github.com/nabeken/go-jwkset/issues/83)) ([d70a9fd](https://github.com/nabeken/go-jwkset/commit/d70a9fdda6fd470148638a49cd5428d9d4417325))
+* **deps:** update all non-major dependencies ([#85](https://github.com/nabeken/go-jwkset/issues/85)) ([34027ff](https://github.com/nabeken/go-jwkset/commit/34027ff4e94d98a77ce8b9e45bb748e199652502))
+* **deps:** update dependency golang to v1.22.2 ([#73](https://github.com/nabeken/go-jwkset/issues/73)) ([7c95c54](https://github.com/nabeken/go-jwkset/commit/7c95c54016c04eb91b6f04b3656d587b4c3c5a24))
+* **deps:** update dependency golang to v1.22.3 ([#81](https://github.com/nabeken/go-jwkset/issues/81)) ([f32f379](https://github.com/nabeken/go-jwkset/commit/f32f3793a23bb1ebfc31939fb99c1e70725a2845))
+* **deps:** update dependency golang to v1.22.4 ([#88](https://github.com/nabeken/go-jwkset/issues/88)) ([6ec2819](https://github.com/nabeken/go-jwkset/commit/6ec28199376bdcf7d95cd6ddce2735d423ec52b9))
+* **deps:** update google-github-actions/release-please-action digest to a37ac6e ([#68](https://github.com/nabeken/go-jwkset/issues/68)) ([288747c](https://github.com/nabeken/go-jwkset/commit/288747c14e2830e926d4f51de951ad1e4f2cff51))
+* **deps:** update google-github-actions/release-please-action digest to e4dc86b ([#84](https://github.com/nabeken/go-jwkset/issues/84)) ([82dce8e](https://github.com/nabeken/go-jwkset/commit/82dce8e33bee21bbcebf93bc86b6a5367a17a40f))
+* **deps:** update googleapis/release-please-action digest to 7987652 ([#89](https://github.com/nabeken/go-jwkset/issues/89)) ([a11f351](https://github.com/nabeken/go-jwkset/commit/a11f351f99d8fddb5a72d4ff523b643dcaa5fce6))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.50.35 ([#67](https://github.com/nabeken/go-jwkset/issues/67)) ([7d936bb](https://github.com/nabeken/go-jwkset/commit/7d936bb2688641769b7ebafabe3eb624bf7b7766))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.51.1 ([#69](https://github.com/nabeken/go-jwkset/issues/69)) ([38c5c5f](https://github.com/nabeken/go-jwkset/commit/38c5c5f863d461b56a2aa1a432712585f837e1bf))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.51.11 ([#72](https://github.com/nabeken/go-jwkset/issues/72)) ([7856c4e](https://github.com/nabeken/go-jwkset/commit/7856c4e5d5a37ec05e1ec737d10f6a9c90a5b629))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.51.16 ([#74](https://github.com/nabeken/go-jwkset/issues/74)) ([d20b069](https://github.com/nabeken/go-jwkset/commit/d20b069743db176bfe2c42900b958e71dc5b6ce9))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.51.30 ([#78](https://github.com/nabeken/go-jwkset/issues/78)) ([a5217a9](https://github.com/nabeken/go-jwkset/commit/a5217a900ebea49ac303a4b0efb65faec9bda7c4))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.51.6 ([#70](https://github.com/nabeken/go-jwkset/issues/70)) ([d152748](https://github.com/nabeken/go-jwkset/commit/d1527480e85780f841f5300c0260d519eec8cf3c))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.52.2 ([#80](https://github.com/nabeken/go-jwkset/issues/80)) ([fc906a9](https://github.com/nabeken/go-jwkset/commit/fc906a933349ea6489c2bd56f169a46550023391))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.54.2 ([#91](https://github.com/nabeken/go-jwkset/issues/91)) ([9bcac6b](https://github.com/nabeken/go-jwkset/commit/9bcac6b13d4a4fb18f238fd7fced6a2390631f80))
+* **deps:** update module github.com/aws/aws-sdk-go to v1.54.6 ([#93](https://github.com/nabeken/go-jwkset/issues/93)) ([00bd18b](https://github.com/nabeken/go-jwkset/commit/00bd18b177a5835b8dcaa42aa5d31841d3c319c9))
+* **deps:** update module github.com/go-jose/go-jose/v4 to v4.0.1 [security] ([#65](https://github.com/nabeken/go-jwkset/issues/65)) ([bcfcf87](https://github.com/nabeken/go-jwkset/commit/bcfcf87b1fd48ad6fe3ec2386e3e98541d9bd89a))
+* **deps:** update nabeken/go-github-apps digest to 6eb3a08 ([#71](https://github.com/nabeken/go-jwkset/issues/71)) ([d7c45ce](https://github.com/nabeken/go-jwkset/commit/d7c45cecc4d3d49aa3c8316da9553a119e5d8af2))
+* **deps:** update nabeken/go-github-apps digest to ad9874f ([#92](https://github.com/nabeken/go-jwkset/issues/92)) ([19209ab](https://github.com/nabeken/go-jwkset/commit/19209abf900bdfc1a38356e172c52580edd3108b))
+
 ## [2.0.0](https://github.com/nabeken/go-jwkset/compare/v1.0.1...v2.0.0) (2024-03-06)
 
 
