@@ -2,10 +2,10 @@ module github.com/nabeken/go-jwkset/v2
 
 go 1.21
 
-toolchain go1.22.4
+toolchain go1.22.5
 
 require (
-	github.com/aws/aws-sdk-go v1.54.11
+	github.com/aws/aws-sdk-go v1.54.15
 	github.com/go-jose/go-jose/v4 v4.0.2
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/stretchr/testify v1.9.0
