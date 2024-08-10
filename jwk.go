@@ -2,6 +2,7 @@ package jwkset
 
 import (
 	"bytes"
+	"context"
 	"crypto/x509"
 	"encoding/json"
 	"encoding/pem"
@@ -26,6 +27,8 @@ type Response struct {
 	TTL time.Duration // This would be used as TTL for caching.
 }
 
+var _ Fetcher = &ALBFetcher{}
+
 // ALBFetcher fetchs a public key from AWS's Application Load Balancer and decodes it into JWK.
 type ALBFetcher struct {
 	Client *http.Client
@@ -38,8 +41,13 @@ func (f *ALBFetcher) keyURL(kid string) string {
 	return fmt.Sprintf("https://public-keys.auth.elb.%s.amazonaws.com/%s", f.Region, kid)
 }
 
-func (f *ALBFetcher) FetchJWKs(kid string) (*Response, error) {
-	resp, err := f.Client.Get(f.keyURL(kid))
+func (f *ALBFetcher) FetchJWKs(ctx context.Context, kid string) (*Response, error) {
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, f.keyURL(kid), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	resp, err := f.Client.Do(req)
 	if err != nil {
 		return nil, err
 	}
