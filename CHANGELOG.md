@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/nabeken/go-jwkset/compare/v2.0.1...v2.0.2) (2025-03-03)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to 21cfef2 ([#142](https://github.com/nabeken/go-jwkset/issues/142)) ([9173f67](https://github.com/nabeken/go-jwkset/commit/9173f67179890758618492327e64df979173b53d))
+
 ## [2.0.1](https://github.com/nabeken/go-jwkset/compare/v2.0.0...v2.0.1) (2025-02-25)
 
 
