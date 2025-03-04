@@ -2,7 +2,7 @@ module github.com/nabeken/go-jwkset/v2
 
 go 1.21
 
-toolchain go1.23.6
+toolchain go1.24.1
 
 require (
 	github.com/aws/aws-sdk-go v1.55.6
