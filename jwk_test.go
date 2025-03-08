@@ -1,6 +1,7 @@
 package jwkset
 
 import (
+	"context"
 	"crypto/ecdsa"
 	"net/http"
 	"net/http/httptest"
@@ -19,7 +20,7 @@ func TestALBFetcher(t *testing.T) {
 		Region: "ap-northeast-1",
 		Algo:   jose.ES256,
 	}
-	jwksresp, err := fetcher.FetchJWKs("21a3e6e4-c32e-4650-b43d-813ba7628f3b")
+	jwksresp, err := fetcher.FetchJWKs(context.TODO(), "21a3e6e4-c32e-4650-b43d-813ba7628f3b")
 	assert.NoError(err)
 	assert.Len(jwksresp.Keys, 1)
 
@@ -40,7 +41,7 @@ func TestFetcher(t *testing.T) {
 
 	testURL := testServer(t)
 
-	jwksresp, err := fetcher.FetchJWKs(testURL)
+	jwksresp, err := fetcher.FetchJWKs(context.TODO(), testURL)
 	assert.NoError(err)
 	assert.Len(jwksresp.Keys, 2)
 }
@@ -57,7 +58,7 @@ func TestJWKsCacher(t *testing.T) {
 	testURL := testServer(t)
 
 	cacheKey := testURL
-	jwksresp, err := cacher.FetchJWKs(cacheKey)
+	jwksresp, err := cacher.FetchJWKs(context.TODO(), cacheKey)
 	assert.NoError(err)
 	assert.Len(jwksresp.Keys, 2)
 
@@ -69,7 +70,7 @@ func TestJWKsCacher(t *testing.T) {
 		assert.Equal(jwksresp.Keys, resp)
 	}
 
-	jwksresp, err = cacher.FetchJWKs(cacheKey)
+	jwksresp, err = cacher.FetchJWKs(context.TODO(), cacheKey)
 	assert.NoError(err)
 	assert.Len(jwksresp.Keys, 2)
 }
@@ -82,7 +83,7 @@ func testServer(t *testing.T) string {
 			return
 		}
 
-		w.Write(data)
+		_, _ = w.Write(data)
 	}))
 
 	t.Cleanup(func() { ts.Close() })
