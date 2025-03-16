@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.0.0](https://github.com/nabeken/go-jwkset/compare/v2.0.2...v3.0.0) (2025-03-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* v3 with AWS SDK For Go v2
+* AWS SDK For Go v2 support ([#130](https://github.com/nabeken/go-jwkset/issues/130))
+
+### Features
+
+* AWS SDK For Go v2 support ([#130](https://github.com/nabeken/go-jwkset/issues/130)) ([d9962ff](https://github.com/nabeken/go-jwkset/commit/d9962fff226dc9a3d70721f74ad085aaf1efe1e4))
+* v3 with AWS SDK For Go v2 ([d9962ff](https://github.com/nabeken/go-jwkset/commit/d9962fff226dc9a3d70721f74ad085aaf1efe1e4))
+
 ## [2.0.2](https://github.com/nabeken/go-jwkset/compare/v2.0.1...v2.0.2) (2025-03-08)
 
 
