@@ -50,5 +50,5 @@ func main() {
 		},
 	}
 
-	json.NewEncoder(os.Stdout).Encode(jwks)
+	_ = json.NewEncoder(os.Stdout).Encode(jwks)
 }
