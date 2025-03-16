@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.2](https://github.com/nabeken/go-jwkset/compare/v2.0.1...v2.0.2) (2025-03-08)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to 21cfef2 ([#142](https://github.com/nabeken/go-jwkset/issues/142)) ([9173f67](https://github.com/nabeken/go-jwkset/commit/9173f67179890758618492327e64df979173b53d))
+* **deps:** update dependency go to v1.24.1 ([#137](https://github.com/nabeken/go-jwkset/issues/137)) ([eebb37c](https://github.com/nabeken/go-jwkset/commit/eebb37c80f0cad4e10e0f0a250f0254a74b9af24))
+* **deps:** update dependency golang to v1.24.1 ([#138](https://github.com/nabeken/go-jwkset/issues/138)) ([18b9dca](https://github.com/nabeken/go-jwkset/commit/18b9dcaa8c1b24fd6d3722eb19d23adbef4414f9))
+* **deps:** update googleapis/release-please-action digest to 26ac09b ([#144](https://github.com/nabeken/go-jwkset/issues/144)) ([daf2fa7](https://github.com/nabeken/go-jwkset/commit/daf2fa7f63eacff87087fb9dbf5113bf02acbcc7))
+* **deps:** update googleapis/release-please-action digest to a02a34c ([#145](https://github.com/nabeken/go-jwkset/issues/145)) ([3da9951](https://github.com/nabeken/go-jwkset/commit/3da99511e057f8455927252cd17d195e8db12515))
+
 ## [2.0.1](https://github.com/nabeken/go-jwkset/compare/v2.0.0...v2.0.1) (2025-02-25)
 
 
