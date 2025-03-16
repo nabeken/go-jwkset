@@ -16,6 +16,10 @@ The current version is `v3`. `v3` is for
 import "github.com/nabeken/go-jwkset/v3"
 ```
 
+## Breaking Changes in v3
+
+- Requring a context in the first argument as AWS SDK For Go v2 requires
+
 # Built-in fetcher implementation
 
 - Plain HTTP
