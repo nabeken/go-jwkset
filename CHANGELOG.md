@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.0.1](https://github.com/nabeken/go-jwkset/compare/v3.0.0...v3.0.1) (2025-03-22)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to af35eda ([#150](https://github.com/nabeken/go-jwkset/issues/150)) ([196a7c8](https://github.com/nabeken/go-jwkset/commit/196a7c8be49d4ba2d0f3a2278a2a3e033192ba71))
+* **deps:** update actions/setup-go digest to 0aaccfd ([#148](https://github.com/nabeken/go-jwkset/issues/148)) ([38b452c](https://github.com/nabeken/go-jwkset/commit/38b452cd1796f63a5962294cc6630fd4f5837ad1))
+* **deps:** update module github.com/aws/aws-sdk-go-v2/service/s3 to v1.78.2 ([#151](https://github.com/nabeken/go-jwkset/issues/151)) ([02093a7](https://github.com/nabeken/go-jwkset/commit/02093a7eafd3d884817d0cc1d4c9c5d9b03323f6))
+
 ## [3.0.0](https://github.com/nabeken/go-jwkset/compare/v2.0.2...v3.0.0) (2025-03-16)
 
 
