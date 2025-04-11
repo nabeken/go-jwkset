@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.0.1](https://github.com/nabeken/go-jwkset/compare/v3.0.0...v3.0.1) (2025-04-11)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token action to v2 ([#156](https://github.com/nabeken/go-jwkset/issues/156)) ([8cb8cd1](https://github.com/nabeken/go-jwkset/commit/8cb8cd106f2024c2e6ec3117cb847b56418ef282))
+* **deps:** update actions/create-github-app-token digest to af35eda ([#150](https://github.com/nabeken/go-jwkset/issues/150)) ([196a7c8](https://github.com/nabeken/go-jwkset/commit/196a7c8be49d4ba2d0f3a2278a2a3e033192ba71))
+* **deps:** update actions/create-github-app-token digest to d72941d ([#153](https://github.com/nabeken/go-jwkset/issues/153)) ([805f6cc](https://github.com/nabeken/go-jwkset/commit/805f6cc3581a9a9ee3dc9620d84dffd4ecf6e4e8))
+* **deps:** update actions/setup-go digest to 0aaccfd ([#148](https://github.com/nabeken/go-jwkset/issues/148)) ([38b452c](https://github.com/nabeken/go-jwkset/commit/38b452cd1796f63a5962294cc6630fd4f5837ad1))
+* **deps:** update dependency go to v1.24.2 ([#154](https://github.com/nabeken/go-jwkset/issues/154)) ([89ede58](https://github.com/nabeken/go-jwkset/commit/89ede58a343e824cf51a014c8af38a695a015645))
+* **deps:** update dependency golang to v1.24.2 ([#155](https://github.com/nabeken/go-jwkset/issues/155)) ([edd73b1](https://github.com/nabeken/go-jwkset/commit/edd73b100e1a0d516ac665aab06b971e0372c977))
+* **deps:** update module github.com/aws/aws-sdk-go-v2/service/s3 to v1.78.2 ([#151](https://github.com/nabeken/go-jwkset/issues/151)) ([02093a7](https://github.com/nabeken/go-jwkset/commit/02093a7eafd3d884817d0cc1d4c9c5d9b03323f6))
+* **deps:** update module github.com/aws/aws-sdk-go-v2/service/s3 to v1.79.1 ([#157](https://github.com/nabeken/go-jwkset/issues/157)) ([f597f6b](https://github.com/nabeken/go-jwkset/commit/f597f6b808df6adcabe627e1ca2a26b83be93a61))
+* **deps:** update module github.com/aws/aws-sdk-go-v2/service/s3 to v1.79.2 ([#160](https://github.com/nabeken/go-jwkset/issues/160)) ([81d64c0](https://github.com/nabeken/go-jwkset/commit/81d64c0f2b8e040456576b141e179003ec62a755))
+
 ## [3.0.0](https://github.com/nabeken/go-jwkset/compare/v2.0.2...v3.0.0) (2025-03-16)
 
 
