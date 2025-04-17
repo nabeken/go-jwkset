@@ -10,7 +10,7 @@ require (
 	github.com/go-jose/go-jose/v4 v4.0.5
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/stretchr/testify v1.10.0
-	go.uber.org/mock v0.5.0
+	go.uber.org/mock v0.5.1
 )
 
 require (
