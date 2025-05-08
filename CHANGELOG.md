@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.0.2](https://github.com/nabeken/go-jwkset/compare/v3.0.1...v3.0.2) (2025-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to 30bf625 ([#163](https://github.com/nabeken/go-jwkset/issues/163)) ([2d0c6f9](https://github.com/nabeken/go-jwkset/commit/2d0c6f9af25596b2b306951ff49c3ed931642a3c))
+* **deps:** update actions/create-github-app-token digest to db3cdf4 ([#164](https://github.com/nabeken/go-jwkset/issues/164)) ([a311053](https://github.com/nabeken/go-jwkset/commit/a311053ece21f4de5b0d2bccd79e060fa55efc75))
+* **deps:** update actions/create-github-app-token digest to df432ce ([#166](https://github.com/nabeken/go-jwkset/issues/166)) ([9cc71dd](https://github.com/nabeken/go-jwkset/commit/9cc71ddb1dc65b001abbf15033b007ea1c86dd52))
+* **deps:** update actions/setup-go digest to d35c59a ([#169](https://github.com/nabeken/go-jwkset/issues/169)) ([b5f9395](https://github.com/nabeken/go-jwkset/commit/b5f9395eb8483ad51fa771909d17b92b85ea54bc))
+* **deps:** update dependency go to v1.24.3 ([#167](https://github.com/nabeken/go-jwkset/issues/167)) ([744e39c](https://github.com/nabeken/go-jwkset/commit/744e39cef62e71eeac1711b0d4efabe7f05e42cf))
+* **deps:** update dependency golang to v1.24.3 ([#168](https://github.com/nabeken/go-jwkset/issues/168)) ([0688262](https://github.com/nabeken/go-jwkset/commit/06882620fb58fe34e074c30d6d84aa74726c0ae9))
+* **deps:** update module github.com/aws/aws-sdk-go-v2/service/s3 to v1.79.3 ([#165](https://github.com/nabeken/go-jwkset/issues/165)) ([7354a28](https://github.com/nabeken/go-jwkset/commit/7354a2801c7ad9886f02eadd978bac07ca464424))
+* **deps:** update module go.uber.org/mock to v0.5.2 ([#161](https://github.com/nabeken/go-jwkset/issues/161)) ([b48ad9d](https://github.com/nabeken/go-jwkset/commit/b48ad9de06c13637adf9481062c7eac018106ad6))
+
 ## [3.0.1](https://github.com/nabeken/go-jwkset/compare/v3.0.0...v3.0.1) (2025-04-11)
 
 
