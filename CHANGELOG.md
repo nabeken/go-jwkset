@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.3](https://github.com/nabeken/go-jwkset/compare/v3.0.2...v3.0.3) (2025-07-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency go to v1.24.5 ([#179](https://github.com/nabeken/go-jwkset/issues/179)) ([da563c3](https://github.com/nabeken/go-jwkset/commit/da563c3b2ba0190a20dbcb92142fb43f09594ac7))
+* **deps:** update dependency golang to v1.24.5 ([#180](https://github.com/nabeken/go-jwkset/issues/180)) ([15a8659](https://github.com/nabeken/go-jwkset/commit/15a86598cfd5f5b78d2b03e2ad0bf32bfd8e7ae5))
+
 ## [3.0.2](https://github.com/nabeken/go-jwkset/compare/v3.0.1...v3.0.2) (2025-07-05)
 
 
