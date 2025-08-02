@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.3](https://github.com/nabeken/go-jwkset/compare/v3.0.2...v3.0.3) (2025-08-02)
+
+
+### Bug Fixes
+
+* **deps:** update aws-sdk-go-v2 monorepo ([#183](https://github.com/nabeken/go-jwkset/issues/183)) ([eb4e02c](https://github.com/nabeken/go-jwkset/commit/eb4e02cca84b71efd7ac16296c2c032598522024))
+* **deps:** update aws-sdk-go-v2 monorepo ([#185](https://github.com/nabeken/go-jwkset/issues/185)) ([e8555df](https://github.com/nabeken/go-jwkset/commit/e8555dfe522939ca903978cee22785ef265a42de))
+* **deps:** update dependency go to v1.24.5 ([#179](https://github.com/nabeken/go-jwkset/issues/179)) ([da563c3](https://github.com/nabeken/go-jwkset/commit/da563c3b2ba0190a20dbcb92142fb43f09594ac7))
+* **deps:** update dependency golang to v1.24.5 ([#180](https://github.com/nabeken/go-jwkset/issues/180)) ([15a8659](https://github.com/nabeken/go-jwkset/commit/15a86598cfd5f5b78d2b03e2ad0bf32bfd8e7ae5))
+* **deps:** update module github.com/aws/aws-sdk-go-v2/service/s3 to v1.84.0 ([#182](https://github.com/nabeken/go-jwkset/issues/182)) ([ff1774f](https://github.com/nabeken/go-jwkset/commit/ff1774fd4468cf3cae980a6054a6ad26ddf6ae14))
+* **deps:** update module github.com/go-jose/go-jose/v4 to v4.1.2 ([#184](https://github.com/nabeken/go-jwkset/issues/184)) ([5d93f5f](https://github.com/nabeken/go-jwkset/commit/5d93f5fd86375772ee2bc4408f7c7bead532a790))
+
 ## [3.0.2](https://github.com/nabeken/go-jwkset/compare/v3.0.1...v3.0.2) (2025-07-05)
 
 
