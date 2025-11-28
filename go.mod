@@ -6,7 +6,7 @@ toolchain go1.25.4
 
 require (
 	github.com/aws/aws-sdk-go-v2 v1.40.0
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.92.0
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.92.1
 	github.com/go-jose/go-jose/v4 v4.1.2
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/stretchr/testify v1.11.1
