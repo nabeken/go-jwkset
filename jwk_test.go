@@ -26,7 +26,7 @@ func TestALBFetcher(t *testing.T) {
 		Region: "ap-northeast-1",
 		Algo:   jose.ES256,
 	}
-	jwksresp, err := fetcher.FetchJWKs(context.TODO(), "21a3e6e4-c32e-4650-b43d-813ba7628f3b")
+	jwksresp, err := fetcher.FetchJWKs(context.TODO(), "1d195df7-f582-4ab3-9809-b010768edc7e")
 	assert.NoError(err)
 	assert.Len(jwksresp.Keys, 1)
 
