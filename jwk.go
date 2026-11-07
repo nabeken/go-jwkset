@@ -57,10 +57,18 @@ func (f *ALBFetcher) FetchJWKs(ctx context.Context, kid string) (*Response, erro
 		return nil, err
 	}
 
+	return f.decodePublicKey(data, kid)
+}
+
+func (f *ALBFetcher) decodePublicKey(data []byte, kid string) (*Response, error) {
 	jwks, err := DecodeSigPublicKey(data, kid, f.Algo)
+	if err != nil {
+		return nil, fmt.Errorf("decoding the public key (%s): %w", kid, err)
+	}
+
 	return &Response{
 		Keys: jwks,
-	}, err
+	}, nil
 }
 
 var _ Fetcher = &InMemoryFetcher{}

@@ -16,18 +16,26 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/go-jose/go-jose/v4"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	gomock "go.uber.org/mock/gomock"
 )
 
 func TestALBFetcher(t *testing.T) {
+	require := require.New(t)
 	assert := assert.New(t)
+
 	fetcher := &ALBFetcher{
 		Client: &http.Client{},
 		Region: "ap-northeast-1",
 		Algo:   jose.ES256,
 	}
-	jwksresp, err := fetcher.FetchJWKs(context.TODO(), "1d195df7-f582-4ab3-9809-b010768edc7e")
-	assert.NoError(err)
+
+	jwksresp, err := fetcher.decodePublicKey(
+		mustReadTestData("aws_alb_test.pub"),
+		"1d195df7-f582-4ab3-9809-b010768edc7e",
+	)
+
+	require.NoError(err)
 	assert.Len(jwksresp.Keys, 1)
 
 	key := jwksresp.Keys[0]
