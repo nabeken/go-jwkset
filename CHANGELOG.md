@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.5](https://github.com/nabeken/go-jwkset/compare/v3.0.4...v3.0.5) (2026-11-20)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to f418cff ([#306](https://github.com/nabeken/go-jwkset/issues/306)) ([4d94da7](https://github.com/nabeken/go-jwkset/commit/4d94da7ec2eb5eaaa331dac6425cfd84282eab92))
+* **deps:** update actions/setup-go digest to d8cbb80 ([#305](https://github.com/nabeken/go-jwkset/issues/305)) ([71ec93a](https://github.com/nabeken/go-jwkset/commit/71ec93a0cb8e4044f001562bd5c0bc789cf604d9))
+* **deps:** update aws-sdk-go-v2 monorepo ([#304](https://github.com/nabeken/go-jwkset/issues/304)) ([bd2db76](https://github.com/nabeken/go-jwkset/commit/bd2db76a9d342f96043cccfe212b2de79e8a1689))
+* **deps:** update go to v1.27.4 ([#303](https://github.com/nabeken/go-jwkset/issues/303)) ([5d6fdb3](https://github.com/nabeken/go-jwkset/commit/5d6fdb3efb65a2223042c8c71dcbb2eed9ca8ddf))
+* **deps:** update module github.com/aws/aws-sdk-go-v2/service/s3 to v1.116.0 ([#307](https://github.com/nabeken/go-jwkset/issues/307)) ([7a8d3ea](https://github.com/nabeken/go-jwkset/commit/7a8d3ea9e8e674c4d91ef52690cb91b27d142581))
+* **deps:** update module github.com/go-jose/go-jose/v4 to v4.1.9 ([#299](https://github.com/nabeken/go-jwkset/issues/299)) ([4f688ab](https://github.com/nabeken/go-jwkset/commit/4f688abcc4d07f4e4cc3d3c1951e111dfaec9b38))
+
 ## [3.0.4](https://github.com/nabeken/go-jwkset/compare/v3.0.3...v3.0.4) (2026-11-07)
 
 
